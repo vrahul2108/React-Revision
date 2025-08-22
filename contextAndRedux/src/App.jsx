@@ -1,16 +1,20 @@
 import { useState } from 'react'
-
+import { UserContextProvider } from './context/UserContextProvider'
+import Profile from './components/Profile'
+import Login from './components/Login'
+import './App.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <>
+    <UserContextProvider>
       
-      <div className='bg-gray-600 p-4 text-white text-3xl text-center'>ContextAPI</div>
+      <Login />
+      <Profile/>
       
-    </>
+    </UserContextProvider>
   )
 }
 
